@@ -7,8 +7,6 @@ TODL is an experimental system for ranking Geometry Dash levels using a **fully 
 Unlike existing demon lists, TODL does not rely on opinion-based ranking.
 Every placement must be derived from **explicit, inspectable rules**.
 
----
-
 ## 2. Core Principles
 
 TODL follows four non-negotiable constraints:
@@ -29,8 +27,6 @@ TODL follows four non-negotiable constraints:
 - The system should apply to any level, not only list demons
 - Custom lists (e.g. themed or filtered lists) should be derivable from the same data
 
----
-
 ## 3. Scope (v0.1)
 
 This version intentionally limits complexity.
@@ -46,13 +42,9 @@ It explicitly ignores:
 - player skill variation
 - subjective “feel”
 
----
-
 ## 4. Model Definition
 
 Each level is evaluated using three metrics:
-
----
 
 ### 4.1 Timing Precision (TP)
 
@@ -100,8 +92,6 @@ Long uninterrupted sections -> higher difficulty
 ET = longest_sequence_without_safe_break
 ```
 
----
-
 ## 5. Scoring Function
 
 The total difficulty score is defined as:
@@ -114,8 +104,6 @@ Constraints:
 - No weights (v0.1)
 - No multipliers
 - No special-case adjustments
-
----
 
 ## 6. Data Structure (Example)
 
@@ -133,8 +121,6 @@ Constraints:
 
 All values must be derivable from observable gameplay.
 
----
-
 ## 7. Known Limitations
 
 This model is incomplete by design.
@@ -147,8 +133,6 @@ Current limitations include:
 * Timing window estimation may be imprecise
 
 These are not bugs—they are excluded to preserve clarity and testability.
-
----
 
 ## 8. Evaluation Criteria
 
@@ -166,16 +150,12 @@ This system should be judged based on:
 
    * When the system fails, is the reason identifiable?
 
----
-
 ## 9. Open Questions
 
 * How can timing windows be measured reliably and consistently?
 * Should burst inputs be treated differently from sustained inputs?
 * Is error tolerance adequately represented by longest sequences?
 * At what point does adding metrics reduce transparency?
-
----
 
 ## 10. Request for Criticism
 
@@ -196,8 +176,6 @@ Instead, specify:
 
 * *why* the model fails
 * *which metric* is insufficient
-
----
 
 ## 11. Positioning
 
